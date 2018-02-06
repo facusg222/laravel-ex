@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('mapa_{idtacho}_{basura}','PagesController@realtime')->where(['idtacho' => '[0-9]+'],['basura' => '[0-9]+']);
